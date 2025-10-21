@@ -6,7 +6,7 @@
 ---
 
 ## 🌐 Live Demo
-🔗 [Visit Future Leaders School Website](https://Sareenashahbaz/github.io/School-System-Website/)
+🔗 [Visit Future Leaders School Website](https://SareenaShahbaz/github.io/School-System-Website/)
 
 ---
 
