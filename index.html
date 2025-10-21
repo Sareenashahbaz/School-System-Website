@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Leaders School</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --emerald: #2e8b57;
+        --emerald-dark: #236b45;
+        --gold: #ffd700;
+        --ivory: #fafaf5;
+        --charcoal: #333333;
+      }
+
+      body {
+        scroll-behavior: smooth;
+        background-color: var(--ivory);
+        color: var(--charcoal);
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: var(--emerald-dark);
+      }
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+        font-weight: 500;
+      }
+      .nav-link:hover {
+        color: var(--gold) !important;
+      }
+      .navbar-brand img {
+        filter: brightness(0.95) contrast(1.1);
+      }
+      /* Hero */
+      .hero {
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        color: var(--emerald);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.027);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* adjust opacity here */
+      }
+
+      /* Section titles */
+      h2.section-title {
+        color: var(--emerald-dark);
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+      }
+
+      h2.section-title::after {
+        content: "";
+        display: block;
+        width: 60%;
+        height: 4px;
+        background: var(--gold);
+        margin: 8px auto 0;
+        border-radius: 2px;
+      }
+
+      /* Cards */
+      .card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Buttons */
+      .btn-primary {
+        background-color: var(--emerald-dark);
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: var(--emerald);
+      }
+
+      footer {
+        background-color: var(--emerald-dark);
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      .table th {
+        background-color: var(--emerald-dark);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+          <img
+            src="img/logo.png"
+            alt="Future Leaders School Logo"
+            width="55"
+            height="55"
+            class="me-2"
+          />
+          Future Leaders School
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          id="navbarNav"
+          class="collapse navbar-collapse justify-content-end"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#admission">Admission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faculty">Faculty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vision">Vision</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#subjects">Subjects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO CAROUSEL -->
+    <section id="home">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active hero"
+            style="background-image: url('img/Future\ Leader\ School.png')"
+          >
+            <div
+              class="d-flex h-100 align-items-center justify-content-center text-center"
+            >
+              <div>
+                <h1 class="display-4 fw-bold">
+                  Welcome to Future Leaders School
+                </h1>
+                <p class="lead">Building Futures, One Leader at a Time</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item hero"
+            style="background-image: url('img/Future\ Leader\ School.png')"
+          >
+            <div
+              class="d-flex h-100 align-items-center justify-content-center text-center"
+            >
+              <div>
+                <h1 class="display-4 fw-bold">Empowering Future Leaders</h1>
+                <p class="lead">Through Excellence, Wisdom, and Character</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION SECTION -->
+    <section id="vision" class="py-5 text-center">
+      <div class="container">
+        <div class="card p-4 shadow border-0">
+          <h2 class="section-title mb-3">Our Vision</h2>
+          <p class="lead px-md-5">
+            At Future Leaders School, we aspire to create a learning environment
+            that inspires curiosity, compassion, and courage. Our mission is to
+            nurture confident learners who excel academically and morally,
+            contributing positively to society.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACULTY SECTION -->
+    <section id="faculty" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Our Faculty</h2>
+        <div class="row g-4">
+          <!-- Math -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="img/Maths Teacher.png" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Mr. Ali Raza</h5>
+                <p class="text-muted">Mathematics</p>
+                <p>"Building logical and analytical minds through numbers."</p>
+              </div>
+            </div>
+          </div>
+          <!-- English -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="img/English Teacher.png" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Mr. Ahmed Khan</h5>
+                <p class="text-muted">English</p>
+                <p>"Fostering creativity and expression through language."</p>
+              </div>
+            </div>
+          </div>
+          <!-- Science -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="img/Science Teacher.png" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Ms. Ayesha Riaz</h5>
+                <p class="text-muted">Science</p>
+                <p>
+                  "Encouraging curiosity to explore the wonders of science."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Social Studies -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img
+                src="img/SocialStudiesTeacher.png"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Mrs. Sarah Ahmed</h5>
+                <p class="text-muted">Social Studies</p>
+                <p>
+                  "Instilling awareness of our world, history, and community."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Computer -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="img/Computer Teacher.png" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Mr. Bilal Haider</h5>
+                <p class="text-muted">Computer Studies</p>
+                <p>"Empowering students with digital skills for tomorrow."</p>
+              </div>
+            </div>
+          </div>
+          <!-- Urdu -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="img/Urdu Teacher.png" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Ms. Nadia Tariq</h5>
+                <p class="text-muted">Urdu</p>
+                <p>
+                  "Connecting students to our roots through Urdu literature."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Islamiat -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="img/Islamiat Teacher.png" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Mr. Asaad Saeed</h5>
+                <p class="text-muted">Islamiat</p>
+                <p>
+                  "Teaching faith, values, and respect through Islamic studies."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Art -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card">
+              <img src="img/Art Teacher.png" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Mrs. Fatima Noor</h5>
+                <p class="text-muted">Art</p>
+                <p>
+                  "Encouraging creativity through colors, imagination, and
+                  design."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBJECTS OFFERED -->
+    <section id="subjects" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Subjects Offered</h2>
+        <div class="row g-4">
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">Mathematics</h5>
+              <p>Enhances problem-solving and analytical thinking abilities.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">English</h5>
+              <p>
+                Develops reading, writing, and communication skills effectively.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">Science</h5>
+              <p>Explores natural phenomena through experiments and logic.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">Social Studies</h5>
+              <p>Promotes understanding of history, geography, and culture.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">Computer Studies</h5>
+              <p>Introduces technology skills essential for the digital age.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">Urdu</h5>
+              <p>
+                Encourages appreciation for national language and literature.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">Islamiat</h5>
+              <p>
+                Builds moral character through Islamic teachings and values.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card text-center p-3">
+              <h5 class="fw-bold text-success">Art</h5>
+              <p>
+                Develops creativity, imagination, and visual expression skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us SECTION -->
+    <section id="Why Choose Us" class="py-5 text-center">
+      <div class="container">
+        <div class="card p-4 shadow border-0">
+          <h2 class="section-title mb-3">Why Choose Us</h2>
+          <p class="lead px-md-5">
+            We combine modern teaching methods with strong moral foundations to
+            inspire lifelong learning. Our expert teachers, innovative
+            curriculum, and inclusive community help students discover their
+            true potential and lead with purpose.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMISSION SECTION -->
+    <section id="admission" class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Admission Form</h2>
+        <form id="admissionForm" class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Contact Number</label>
+            <input type="tel" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Grade Level Applying For</label>
+            <select class="form-select" required>
+              <option selected disabled>Choose...</option>
+              <option>Grade 1</option>
+              <option>Grade 2</option>
+              <option>Grade 3</option>
+              <option>Grade 4</option>
+              <option>Grade 5</option>
+              <option>Grade 6</option>
+              <option>Grade 7</option>
+              <option>Grade 8</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="col-12 text-center mt-3">
+            <button type="submit" class="btn btn-primary px-5 py-2">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="mb-1">📧 info@FutureLeadersSchool.com | ☎ +92 300 1234567</p>
+      <p>
+        <i class="bi bi-facebook mx-2"></i>
+        <i class="bi bi-twitter mx-2"></i>
+        <i class="bi bi-instagram mx-2"></i>
+      </p>
+      <p class="mb-0">
+        &copy; 2025 Future Leaders School. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-success fw-bold">
+              Application Received
+            </h5>
+          </div>
+          <div class="modal-body">
+            <p>
+              Thank you for applying. Please prepare for your admission test.<br />
+              You will receive further information via email.
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const form = document.getElementById("admissionForm");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const modal = new bootstrap.Modal(
+          document.getElementById("thankYouModal")
+        );
+        modal.show();
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
